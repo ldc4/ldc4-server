@@ -14,7 +14,7 @@ describe('test/app/controller/home.test.js', () => {
   it('should GET /', () => {
     return app.httpRequest()
       .get('/')
-      .expect('hi, egg')
+      .expect('服务没有挂掉！')
       .expect(200);
   });
 });

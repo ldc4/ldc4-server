@@ -1,14 +1,29 @@
 # ldc4-server
 
-使用eggjs框架提供node服务
+使用[eggjs][egg]框架提供node服务
 
-## QuickStart
+## 部署
 
-<!-- add docs here for user -->
+nginx配置
+```
+location /node/ {
+    proxy_pass http://localhost:7001/;
+}
+```
 
-see [egg docs][egg] for more detail.
+初始化
 
-### Development
+npm install
+
+启动
+
+nohup npm start &
+
+停止
+
+npm stop
+
+## 本地开发
 
 ```bash
 $ npm i
@@ -16,18 +31,10 @@ $ npm run dev
 $ open http://localhost:7001/
 ```
 
-### Deploy
+## 接口
 
-```bash
-$ npm start
-$ npm stop
-```
-
-### npm scripts
-
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
+获取每日必应图：/bing/picImg
+获取每日必应图URL：/bing/picUrl
 
 
 [egg]: https://eggjs.org

@@ -12,3 +12,6 @@ run/
 *.un~
 typings/
 .nyc_output/
+# 打包
+release.sh
+ldc4-server.zip
