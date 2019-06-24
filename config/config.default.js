@@ -20,7 +20,15 @@ module.exports = appInfo => {
 
   // add your user config here
   const userConfig = {
-    // myAppName: 'egg',
+    yun: {
+      SecretId: '',
+      SecretKey: '',
+    },
+    cos: {
+      Bucket: '',
+      Region: '',
+      KeyPrefix: '',
+    },
   };
 
   return {
