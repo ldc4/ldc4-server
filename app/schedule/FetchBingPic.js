@@ -11,13 +11,12 @@ class FetchBingPic extends Subscription {
   static get schedule() {
     return {
       disable: false,
-      cron: '0 19 0 * * *',
-      // interval: '3s',
+      cron: '0 0 0 * * *',
       type: 'worker', // 指定随机一个 worker 执行
     };
   }
 
-  async subscribe2() {
+  async subscribe() {
     const { ctx, config } = this;
     const cos = new COS({
       SecretId: _.get(config, 'yun.SecretId'),
